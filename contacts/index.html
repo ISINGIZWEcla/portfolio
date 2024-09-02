@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Me</title>
+    <link rel="icon" href="../assets/icons/conract.jpg" type="image/jpeg">
+    <link rel="stylesheet" href="../styles/home.css">
+    <link rel="stylesheet" href="../styles/contacts.css">
+
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects/index.html">Projects</a></li>
+            <li><a href="../resume.html">Resume</a></li>
+            <li><a href="contacts/index.html">Contacts</a></li>
+        </ul>
+    </nav>
+    <div class="contact-body">
+    <h1>Contact Us</h1>
+    <form action="mailto:klaraisingizwe@gmail.com" method="POST" enctype="text/plain">
+        <label for="email">Email Address:</label>
+        <input type="email" id="email" name="email" required>
+        <br><br>
+
+        <label for="subject">Subject:</label>
+        <input type="text" id="subject" name="subject" required>
+        <br><br>
+
+        <label for="body">Message:</label>
+        <textarea id="body" name="body" rows="5" cols="30" required></textarea>
+        <br><br>
+
+        <button>Send</button>
+    </form>
+    </div>
+</body>
+</html>
