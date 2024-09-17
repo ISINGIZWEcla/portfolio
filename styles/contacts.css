@@ -20,7 +20,7 @@ form {
     border-radius: 8px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    width: 300px;
+    width: 500px;
 }
 
 label {
@@ -54,5 +54,10 @@ button {
 }
 
 button:hover {
-    background-color: #2c3e50;
+    background-color: #69a9e9;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
 }
