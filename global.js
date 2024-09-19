@@ -41,3 +41,35 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Navigation element not found!");
     }
 });
+
+
+document.addEventListener("DOMContentLoaded", function() {
+    // Insert dark mode switcher at the start of the body
+    document.body.insertAdjacentHTML("afterbegin", `
+        <label class="color-scheme">
+            Theme:
+            <select id="theme-switcher">
+                <option value="light dark">Automatic</option>
+                <option value="light">Light</option>
+                <option value="dark">Dark</option>
+            </select>
+        </label>
+    `);
+
+    // Get the <select> element
+    const select = document.getElementById("theme-switcher");
+
+    // Load saved theme from localStorage
+    if ("colorScheme" in localStorage) {
+        const savedScheme = localStorage.colorScheme;
+        document.documentElement.style.setProperty("color-scheme", savedScheme);
+        select.value = savedScheme;
+    }
+
+    // Listen for user theme changes
+    select.addEventListener("input", function(event) {
+        const selectedScheme = event.target.value;
+        document.documentElement.style.setProperty("color-scheme", selectedScheme);
+        localStorage.colorScheme = selectedScheme;  // Save preference
+    });
+});
